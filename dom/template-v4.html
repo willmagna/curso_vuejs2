@@ -20,6 +20,19 @@
   <a v-bind:href="link" target="_blank">Google</a>
   <a :href="link" target="_blank">Google</a>
 
+  <!--
+    Criei minha prórpia diretiva.
+
+    HTML5 permite que você crie propriedades personalizadas.
+
+    Acessar minha diretiva através de Javascript puro:
+    document.querySelector('[will-bind]');
+    document.querySelector('[will-bind]').getAttribute('will-bind');
+    document.querySelector('[will-bind]').innerText
+
+  -->
+  <p will-bind="ABC">{{ titulo }}</p>
+
 </div>
 
 <script>
