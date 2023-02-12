@@ -1,0 +1,36 @@
+<!-- development version, includes helpful console warnings -->
+<script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+
+<div id="app">
+  <input type="text" placeholder="showAlert" v-on:keyup="showAlert()">
+  <input type="text" placeholder="showAlertEnterKey" v-on:keyup.enter="showAlertEnterKey()">
+  <input type="text" placeholder="showAlertCtrlEnterKey" v-on:keyup.enter.control="showAlertCtrlEnterKey()">
+  <input type="text" placeholder="showAlertK" v-on:keyup.k="showAlertK()">
+</div>
+
+<script>
+  new Vue({
+    el: app,
+    data() {
+      return {
+        contador: 0,
+        x: 0,
+        y: 0,
+      }
+    },
+    methods: {
+      showAlert(){
+        alert('QQ tecla');
+      },
+      showAlertEnterKey(){
+        alert('Tecla Enter');
+      },
+      showAlertCtrlEnterKey(){
+        alert('Tecla Ctrl + Enter');
+      },
+      showAlertK(){
+        alert('Tecla K');
+      },
+    }
+  });
+</script>
