@@ -1,0 +1,58 @@
+<!-- development version, includes helpful console warnings -->
+<script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+
+<div id="app">
+
+  <!-- 20. Propriedades Computadas Computed-->
+  <button v-on:click="aumentar">Aumentar</button>
+  <button v-on:click="contador2++">Aumentar2</button>
+  <button v-on:click="diminuir">Diminuir</button>
+  <p>Contador: {{ contador }} | {{ contador2 }}</p>
+  <p>Resultado: {{ resultado }}</p>
+
+</div>
+
+<script>
+  new Vue({
+    el: app,
+    data() {
+      return {
+        titulo: 'Propriedades Reativas V2',
+        contador: 0,
+        contador2: 0,
+      }
+    },  
+    computed: {
+      //propriedades computadas são sincronas
+      //chamou, obrigatóriamente tem que retornar um valor
+
+      resultado(){
+        console.log('Metodo resultado foi chamado');
+        return this.contador >= 5 ? 'Maior ou igual a 5' : 'Manor que 5';
+      }
+    },
+    watch: {
+      //O watch tem que ter conflito, já as outras propriedades, não.
+      //O watch você estará monitorando as aleterações de alguma variável
+      //O método deve levar o mesmo nome da variável
+      contador(novo, antigo){
+        console.log(novo, antigo);
+        setTimeout( () => {
+          this.contador = 0;
+        }, 2000)
+      }
+    },
+    methods: {
+      aumentar(){
+        this.contador++;
+      },
+      diminuir(){
+        this.contador--;
+      },
+//      resultado(){
+//      console.log('Metodo resultado foi chamado');
+//        return this.contador >= 5 ? 'Maior ou igual a 5' : 'Manor que 5';
+//      }
+    }
+  });
+</script>
