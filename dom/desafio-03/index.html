@@ -25,13 +25,13 @@
         },
         computed: {
             resultado(){
-                return this.valor >= 37 ? 'Igual a 37' : 'Diferente de 37';
+                return this.valor == 37 ? 'Igual' : 'Diferente';
             }
         },
         watch: {
             resultado(){
                 console.log(this.resultado);
-                if(this.resultado === "Igual a 37"){
+                if(this.resultado === "Igual"){
                     setTimeout(() => {
                         this.valor = 0;
                     }, 5000);
