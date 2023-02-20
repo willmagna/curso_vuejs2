@@ -7,6 +7,10 @@ new Vue({
 		colorNumber05: "red",
 		className05: null,
 		initiateLoading: false,
+		styleSheet: {
+			width: '100px',
+			height: '100px'
+		}
 	},
 	methods: {
 		iniciarEfeito() {
