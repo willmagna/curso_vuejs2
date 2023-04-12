@@ -2,7 +2,9 @@
 	<v-app>
 		<d-navigation />
 		<d-toolbar />
-		<d-content />
+		<v-content>
+			<d-carousel />
+		</v-content>
 		<d-footer />
 	</v-app>
 </template>
@@ -10,7 +12,7 @@
 <script>
 import Navigation from './Navigation.vue';
 import ToolbarVue from './Toolbar.vue';
-import Content from './Content.vue';
+import Carousel from './Carousel.vue';
 import Footer from './Footer.vue';
 
 export default {
@@ -18,7 +20,7 @@ export default {
 		"d-navigation": Navigation,
 		"d-footer": Footer,
 		"d-toolbar": ToolbarVue,
-		"d-content": Content,
+		"d-carousel": Carousel,
 	},
 	data() {
 		return {
