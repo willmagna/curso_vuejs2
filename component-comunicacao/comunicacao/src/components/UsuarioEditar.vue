@@ -3,7 +3,7 @@
         <h2>Alterar os Dados de Usuário</h2>
         <p>Edite as informações</p>
         <p>Idade é: <strong>{{ idade }}</strong></p>
-        <button @click="alterarIdade">Alterar Idade</button>
+        <button @click="alterarIdade">Alterar Idade (emit)</button>
         <button @click="fnAlterarIdade(32)">Alterar Idade (Callback)</button>
     </div>
 </template>
