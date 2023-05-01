@@ -6,8 +6,6 @@
         </span>
         {{ numero }} {{ indice }}
         <!-- {{ citacoes[indice].texto }} -->
-
-
         <!-- <citacao :texto="citacoes[indice].texto"></citacao> -->
 
         <citacao>
