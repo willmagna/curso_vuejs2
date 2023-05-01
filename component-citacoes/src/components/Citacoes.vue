@@ -5,27 +5,48 @@
             <button @click="numero++">&gt;</button>
         </span>
         {{ numero }} {{ indice }}
+        <!-- {{ citacoes[indice].texto }} -->
+
+
+        <!-- <citacao :texto="citacoes[indice].texto"></citacao> -->
+
+        <citacao>
+            <h1>{{ citacoes[indice].autor }}</h1>
+            <p>{{ citacoes[indice].texto }}</p>
+            <h6>{{ citacoes[indice].fonte }}</h6>
+        </citacao>
+
     </div>
 </template>
 
 <script>
+
+import Citacao from './Citacao.vue';
+
 export default {
+    components: {
+        citacao: Citacao
+    },
     data() {
         return {
             numero: 0,
-            citacoes: [{
-                fonte: 'Jornal do Empreendedor',
-                texto: 'Lembre-se sempre que você é absolutamente único. Assim como todos os outros.',
-                autor: 'Margaret Mead'
-            }, { 
-                fonte: 'Frases de Mãe',
-                texto: 'Isso não é um quarto, é um chiqueiro.',
-                autor: 'Roberta'
-            }, {
-                fonte: 'Frases de Pai',
-                texto: 'Vou contar até 3! 1, 2, 2...',
-                autor: 'Gustavo'
-            }]
+            citacoes: [
+                {
+                    fonte: 'Jornal do Empreendedor',
+                    texto: 'Lembre-se sempre que você é absolutamente único. Assim como todos os outros.',
+                    autor: 'Margaret Mead'
+                },
+                {
+                    fonte: 'Frases de Mãe',
+                    texto: 'Isso não é um quarto, é um chiqueiro.',
+                    autor: 'Roberta'
+                },
+                {
+                    fonte: 'Frases de Pai',
+                    texto: 'Vou contar até 3! 1, 2, 2...',
+                    autor: 'Gustavo'
+                }
+            ]
         }
     },
     computed: {
@@ -37,9 +58,9 @@ export default {
 </script>
 
 <style scoped>
-    .citacoes {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
+.citacoes {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 </style>
