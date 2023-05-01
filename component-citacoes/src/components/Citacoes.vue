@@ -50,8 +50,21 @@ export default {
     computed: {
         indice() {
             return Math.abs(this.numero % 3)
-        }
-    }
+        },
+    },
+    created() {
+        console.log("citacoes - created");
+    },
+    destroyed() {
+        console.log("citacoes - destroyed");
+    },
+    activated() {
+        console.log("citacoes - activated");
+    },
+    deactivated() {
+        console.log("citacoes - deactivated");
+    },
+
 }
 </script>
 

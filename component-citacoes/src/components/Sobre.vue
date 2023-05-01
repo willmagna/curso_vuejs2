@@ -7,7 +7,18 @@
 
 <script>
 export default {
-
+    created(){
+        console.log("Sobre - created");
+    },
+    destroyed(){
+        console.log("Sobre - destroyed");
+    },
+    activated(){
+        console.log("Sobre - activated");
+    },
+    deactivated(){
+        console.log("Sobre - deactivated");
+    },
 }
 </script>
 
