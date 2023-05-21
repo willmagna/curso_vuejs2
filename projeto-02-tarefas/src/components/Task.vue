@@ -14,8 +14,8 @@ export default {
     computed: {
         stateClass() {
             return {
-                pending: this.task.pending,
-                done: !this.task.pending
+                pending: this.task.pending, //true
+                done: !this.task.pending //false  
             }
         }
     }
