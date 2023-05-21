@@ -16,7 +16,10 @@ import Task from './Task.vue'
 export default {
     components: { Task },
     props: {
-        tasks: { type: Array, required: true }
+        tasks: { 
+            type: Array, 
+            required: true 
+        }
     }
 }
 </script>

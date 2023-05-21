@@ -38,7 +38,10 @@ export default {
 	},
 	methods: {
 		addTask(task) {
-			const sameName = t => t.name === task.name
+			//const sameName = t => t.name === task.name
+			const sameName = (t) => (
+				t.name === task.name
+			)
 			const reallyNew = this.tasks.filter(sameName).length == 0
 			if(reallyNew) {
 				this.tasks.push({
